@@ -278,7 +278,7 @@
 
     <!-- chaged to cm-12.0 1:HOME 2:BACK 4:MENU  64:VOL  
     -->
-    <integer name="config_deviceHardwareKeys">64</integer>
+    <integer name="config_deviceHardwareKeys">71</integer>
     <integer name="config_deviceHardwareWakeKeys">64</integer>
 
 </resources>

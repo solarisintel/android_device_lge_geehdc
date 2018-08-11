@@ -25,12 +25,13 @@ TARGET_CPU_VARIANT := krait
 TARGET_NO_BOOTLOADER := true
 
 # Inline kernel
-TARGET_KERNEL_CONFIG := lgl21_defconfig
-TARGET_KERNEL_SOURCE := kernel/lge/geehdc
+TARGET_KERNEL_CONFIG := geehdc_defconfig
+TARGET_KERNEL_SOURCE := kernel/lge/gee-geehdc
 
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=geehdc lpj=67677 user_debug=31 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=geehdc lpj=67677 user_debug=31 androidboot.selinux=permissive
+##BOARD_KERNEL_CMDLINE := vmalloc=600M console=null lpj=67677 user_debug=31 msm_rtb.filter=0x0 ehci-hcd.park=3 coresight-etm.boot_enable=0 androidboot.hardware=geehdc androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 
 BOARD_USES_ALSA_AUDIO:= true
@@ -64,12 +65,13 @@ WIFI_DRIVER_FW_PATH_AP  := "ap"
 BOARD_EGL_CFG := device/lge/geehdc/egl.cfg
 
 #BOARD_USES_HGL := true
-#BOARD_USES_OVERLAY := true
 USE_OPENGL_RENDERER := true
 TARGET_USES_ION := true
 TARGET_USES_OVERLAY := true
 TARGET_USES_SF_BYPASS := true
-TARGET_USES_C2D_COMPOSITON := true
+#TARGET_USES_C2D_COMPOSITON := true
+# L01E is false ok 
+TARGET_USES_C2D_COMPOSITON := false
 
 #WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
 #WITH_DEXPREOPT := true
@@ -117,11 +119,18 @@ USE_MINIKIN := true
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
 
-MALLOC_IMPL := dlmalloc
+## do not change
+## MALLOC_IMPL := dlmalloc
+
+## set when kernel is flat memory model 
+##BOARD_USES_LEGACY_MMAP := true
 
 -include vendor/lge/geehrc/BoardConfigVendor.mk
 
+# my cm-13 source must need 
 TARGET_USES_LOGD := true
 
 # loki
 TARGET_RELEASETOOLS_EXTENSIONS := device/lge/geehdc/loki
+
+

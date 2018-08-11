@@ -53,8 +53,10 @@ PRODUCT_COPY_FILES += \
 	device/lge/geehdc/init.geehdc.wifi.sh:system/bin/init.geehdc.wifi.sh
 
 PRODUCT_COPY_FILES += \
-	device/lge/geehdc/audio_policy.conf:system/etc/audio_policy.conf \
-        device/lge/geehdc/thermald-geehdc.conf:system/etc/thermald.conf
+	device/lge/geehdc/audio_policy.conf:system/etc/audio_policy.conf 
+
+#PRODUCT_COPY_FILES += \
+#        device/lge/geehdc/thermald-geehdc.conf:system/etc/thermald.conf
 
 PRODUCT_COPY_FILES += \
         device/lge/geehdc/fetch-swv:system/bin/fetch-swv
@@ -231,6 +233,7 @@ PRODUCT_PACKAGES += \
         libgps.utils \
         gps.msm8960 \
         flp.msm8960
+
 
 PRODUCT_PACKAGES += \
 	bdAddrLoader \
