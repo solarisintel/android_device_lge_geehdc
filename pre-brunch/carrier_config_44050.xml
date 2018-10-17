@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<carrier_config_list>
+<carrier_config>
+<boolean name="show_apn_setting_cdma_bool" value="true"/>
+<string name="carrier_eri_file_name_string">eri_44050.xml</string>
+<boolean name="show_cdma_choices_bool" value="true" />
+<boolean name="enabledMMS" value="true" />
+</carrier_config>
+</carrier_config_list>
