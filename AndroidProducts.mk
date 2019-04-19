@@ -15,4 +15,6 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/geehdc.mk
+    $(LOCAL_DIR)/aosp_geehdc.mk \
+    $(LOCAL_DIR)/nitrogen_geehdc.mk \
+    $(LOCAL_DIR)/full_geehdc.mk

@@ -1,0 +1,7 @@
+
+type btnvtool_exec, exec_type, vendor_file_type, file_type;
+
+# domain_auto_trans(init, btnvtool_exec, bluetooth)
+
+set_prop(bluetooth, bluetooth_prop)
+
