@@ -1,1 +1,3 @@
-# android_device_lge_geehdc cm-12.0
+# android_device_lge_geehdc for Nitrogen 8.1
+
+for L-01E , LGL21 
